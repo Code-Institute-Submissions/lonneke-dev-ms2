@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat Alternates:100,200,300,400,500,600,700|Montserrat:100,200,300,400,500,600,700');
+
+/* navbar */ 
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: +1;
+}
+
+.navbar {
+    background: rgb(185, 174, 174);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 20px;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.navbar-nav {
+    margin: auto 15px auto auto;
+}
