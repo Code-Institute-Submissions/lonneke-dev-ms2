@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat Alternates:100,200,300,400,500,600,700|Montserrat:100,200,300,400,500,600,700');
 
+/* general rules */ 
+
+body {
+    font-family: "Montserrat", sans-serif; 
+    background: url("../images/background-index.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 /* navbar */ 
 
 header {
@@ -9,7 +20,7 @@ header {
 }
 
 .navbar {
-    background: rgb(185, 174, 174);
+    background: rgb(92, 92, 92);
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 20px;
     padding: 0;
@@ -18,8 +29,14 @@ header {
 .navbar-brand {
     font-size: 30px;
     margin-left: 15px;
+    background: url("../images/background-index.jpg") no-repeat center center fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .navbar-nav {
     margin: auto 15px auto auto;
+    background: url("../images/background-index.jpg") no-repeat center center fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
