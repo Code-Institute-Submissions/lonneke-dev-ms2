@@ -20,6 +20,17 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+.hide {
+    display: none;
+}
+
+.btn {
+    padding: 15px 45px;
+    color: #fff;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
 /*----------------------------------- Bs navbar */
 
 header {
@@ -93,22 +104,65 @@ header {
 /*----------------------------------- Modal start */
 
 .level {
-    width: 80px;
+    width: 90px;
     margin: 10px;
     border-radius: .3em;
 }
 
-.levels {
-    border: 1px solid #000;
+.custom-box {
     background-color: rgb(92, 92, 92);
-    width: 95%;
+    width: 800px;
+    max-width: 95%;
     margin-top: 60px;
-    border-radius: .3rem;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
 } 
 
 .level-title {
     margin-top: 10px;
     color: #fff;
 }
-/*----------------------------------- Difficulty levels */
+/*----------------------------------- questions section */
 
+.question-number {
+    background: url("../images/background-index.jpg") no-repeat center center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+
+.question-text {
+    line-height: 28px;
+    padding: 20px 0;
+}
+
+.option-container {
+
+}
+
+.option {
+    background-color: #fff;
+    padding: 15px;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.answers-indicator {
+    border-top: 1px solid #000;
+}
+
+.answers-indicator div{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+}

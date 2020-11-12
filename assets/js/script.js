@@ -1,4 +1,5 @@
-
+$(document).ready(function() {
+})
 // Instructions modal
 var modal = document.getElementById('instructionsModal');
 var btn = document.getElementById('instructions');
