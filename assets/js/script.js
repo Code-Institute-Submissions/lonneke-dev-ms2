@@ -1,9 +1,9 @@
 // Instructions modal
 var modal = document.getElementById('instructionsModal');
-var btn = document.getElementById('instructions');
+var button = document.getElementById('instructions');
 var span = document.getElementsByClassName('close')[0];
 
-btn.onclick = function() {
+button.onclick = function() {
   modal.style.display = "block";
 }
 
@@ -19,8 +19,8 @@ window.onclick = function(event) {
 
 // Sources of audio-files
 
-var source1 = document.getElementsByClassName("question-audio").src= "audio-files/test1.mp3";
-var source2 = document.getElementsByClassName("question-audio").src= "audio-files/test2.mp3";
+var source1 = document.getElementsByClassName("question-audio").src= "audio-files/test2.mp3";
+var source2 = document.getElementsByClassName("question-audio").src= "audio-files/test1.mp3";
 var source3 = document.getElementsByClassName("question-audio").src= "audio-files/test3.mp3";
 var source4 = document.getElementsByClassName("question-audio").src= "audio-files/test4.mp3";
 
@@ -51,13 +51,14 @@ const quiz = [
 
 const questionNumber = document.querySelector(".question-number");
 const questionAudio = document.querySelector(".question-audio");
-const questionContainer = document.querySelector("option-container");
+const optionContainer = document.querySelector(".option-container");
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
+let availableOptions = [];
 
-// Question 1/2 etc
+// Question counter
 function setAvailableQuestions() {
     const totalQuestion = quiz.length;
     for(let i=0; i<totalQuestion; i++) {
@@ -72,7 +73,63 @@ function getNewQuestion() {
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
     currentQuestion = questionIndex;
     questionAudio.src = currentQuestion.song;
+
+    const index1 = availableQuestions.indexOf(questionIndex);
+
+    availableQuestions.splice(index1,1);
+// Options and random options
+    const optionlen = currentQuestion.options.length
     
+    for(let i=0; i<optionlen; i++) {
+        availableOptions.push(i)
+    }
+    optionContainer.innerHTML = " ";
+    let animationDelay = 0.15;
+
+    for(let i=0; i<optionlen; i++) {
+        const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+        const index2 = availableOptions.indexOf(optionIndex);
+        availableOptions.splice(index2,1);
+        const option = document.createElement("div");
+        option.innerHTML = currentQuestion.options[optionIndex];
+        option.style.animationDelay = animationDelay + "s";
+        animationDelay = animationDelay + 0.15;
+        option.id = optionIndex;
+        option.className = "option";
+        optionContainer.appendChild(option)
+        option.setAttribute("onclick", "getResult(this)");
+    }
+
+    questionCounter++
+}
+
+// Get the results of the current question
+function getResult(element) {
+    const id = parseInt(element.id);
+    
+    if(id === currentQuestion.answer) {
+        element.classList.add("correct");
+    } else {
+        element.classList.add("wrong");
+    }
+
+    unclickableOptions();
+}
+
+// make sure the user can't change the answer
+function unclickableOptions() {
+    const optionLen = optionContainer.children.length;
+    for(let i=0; i<optionLen; i++) {
+        optionContainer.children[i].classList.add("already-answered")
+    }
+}
+
+function next() {
+    if(questionCounter === quiz.length) {
+        console.log("quiz over");
+    } else {
+        getNewQuestion();
+    }
 }
 
 window.onload = function() {
