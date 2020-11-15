@@ -137,9 +137,9 @@ header {
     line-height: 25px;
 }
 
-.question-text {
-    line-height: 28px;
-    padding: 20px 0;
+.question-audio {
+    margin: 10px;
+    width: 80%;
 }
 
 .option {

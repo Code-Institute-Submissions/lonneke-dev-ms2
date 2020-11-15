@@ -53,11 +53,16 @@ const questionNumber = document.querySelector(".question-number");
 const questionAudio = document.querySelector(".question-audio");
 const optionContainer = document.querySelector(".option-container");
 const answersIndicatorContainer = document.querySelector(".answers-indicator");
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultsBox = document.querySelector(".results-box");
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
+let correctAnswers = 0;
+let attempt = 0;
 
 // Question counter
 function setAvailableQuestions() {
@@ -115,6 +120,8 @@ function getResult(element) {
         element.classList.add("correct");
 
         updateAnwserIndicator("correct");
+        correctAnswers++;
+        console.log("correct:" + correctAnswers)
     } else {
         element.classList.add("wrong");
 
@@ -127,7 +134,7 @@ function getResult(element) {
             }
         }
     }
-
+    attempt++;
     unclickableOptions();
 }
 
@@ -139,7 +146,9 @@ function unclickableOptions() {
     }
 }
 
+// keeps track of how many question were answered correctly
 function answerIndicator() {
+    answersIndicatorContainer.innerHTML = " ";
     const totalQuestion = quiz.length;
     for(let i=0; i<totalQuestion; i++) {
         const indicator = document.createElement("div");
@@ -155,9 +164,28 @@ function updateAnwserIndicator(markType) {
 function next() {
     if(questionCounter === quiz.length) {
         console.log("quiz over");
+        quizOver();
     } else {
         getNewQuestion();
     }
+}
+
+function quizOver() {
+    quizBox.classList.add("hide");
+
+    resultsBox.classList.remove("hide");
+    quizResults();
+}
+
+// all results 
+function quizResults() {
+    resultsBox.querySelector(".total-question").innerHTML = quiz.length;
+    resultsBox.querySelector(".total-attempt").innerHTML = attempt;
+    resultsBox.querySelector(".total-correct").innerHTML = correctAnswers;
+    resultsBox.querySelector(".total-wrong").innerHTML = attempt - correctAnswers;
+    const percentage = (correctAnswers/quiz.length)*100;
+    resultsBox.querySelector(".total-percentage").innerHTML = percentage.toFixed(2) + "%";
+    resultsBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
 }
 
 window.onload = function() {
