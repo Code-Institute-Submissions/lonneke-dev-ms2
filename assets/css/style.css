@@ -219,6 +219,14 @@ header {
     margin-top: 15px;
 }
 
+.answers-indicator div.correct {
+    background-color: green;
+}
+
+.answers-indicator div.wrong {
+    background-color: red;
+}
+
 /*----------------------------------- Results section */
 
 .results-box table {
