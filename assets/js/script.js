@@ -188,8 +188,37 @@ function quizResults() {
     resultsBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
 }
 
-window.onload = function() {
-    setAvailableQuestions();
+function resetQuiz() {
+    questionCounter = 0;
+    correctAnswers = 0;
+    attempt = 0;
+}
+
+function tryAgainQuiz() {
+    resultsBox.classList.add("hide");
+
+    quizBox.classList.remove("hide");
+    resetQuiz();
+    startQuiz();
+}
+
+function goToHome() {
+    resultsBox.classList.add("hide");
+
+    homeBox.classList.remove("hide");
+    resetQuiz();
+}
+
+// #### STARTING POINT ####
+
+function startQuiz() {
+
+    homeBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+
+    setAvailableQuestions(); 
+
     getNewQuestion();
+    
     answerIndicator();
 }

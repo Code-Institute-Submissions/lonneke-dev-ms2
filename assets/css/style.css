@@ -119,7 +119,19 @@ header {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    animation: fadeInRight 1s ease;
 } 
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 
 .level-title {
     margin-top: 10px;

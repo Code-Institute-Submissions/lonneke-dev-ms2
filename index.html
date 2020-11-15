@@ -45,12 +45,9 @@
     </div>
 
     <!-- main screen-->
-    <div class="mx-auto .home-box custom-box hide">
-        <div class="row justify-content-center">
-            <h2 class="level-title">Unlock each level!</h2>
-        </div>
-        <div class="row justify-content-center">        
-            <button type="button" id="easy-btn btn" class="btn">
+    <div class="mx-auto home-box custom-box">
+            <h2 class="level-title">Unlock each level!</h2>       
+            <button type="button" id="easy-btn btn" class="btn" onclick="startQuiz()">
                 <h1><i class="fas fa-music"></i></h1>
                 <p>Easy</p>
             </button>
@@ -62,11 +59,10 @@
                 <h1><i class="fas fa-file-audio"></i></h1>
                 <p>Hard</p>
             </button>
-        </div>
     </div>
 
     <!-- easy screen (quiz) -->
-    <div class="quiz-box custom-box mx-auto">
+    <div class="quiz-box custom-box mx-auto hide">
         <div class="question-number">
         </div>
         <div>
@@ -110,7 +106,7 @@
             </tr>
         </table>
         <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
-        <button type="button" class="btn" onclick="goTohome()">Go Home</button>
+        <button type="button" class="btn" onclick="goToHome()">Go Home</button>
     </div>
 
 </body>
