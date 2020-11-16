@@ -20,7 +20,7 @@ window.onclick = function(event) {
 // Sources of audio-files
 var source1 = document.getElementsByClassName("question-audio").src= "audio-files/Bee Gees - Stayin' Alive.mp3";
 var source2 = document.getElementsByClassName("question-audio").src= "audio-files/Billy Joel - Piano Man.mp3";
-var source3 = document.getElementsByClassName("question-audio").src= "audio-files/Bobby McFerrin - Don't Worry Be Happy.mp3";
+var source3 = document.getElementsByClassName("question-audio").src= "audio-files/Bobby McFerrin - Dont Worry Be Happy.mp3";
 var source4 = document.getElementsByClassName("question-audio").src= "audio-files/David Bowie - Heroes.mp3";
 var source5 = document.getElementsByClassName("question-audio").src= "audio-files/Europe - The Final Countdown.mp3";
 var source6 = document.getElementsByClassName("question-audio").src= "audio-files/Stromae - Formidable.mp3";
@@ -30,7 +30,7 @@ var source9 = document.getElementsByClassName("question-audio").src= "audio-file
 var source10 = document.getElementsByClassName("question-audio").src= "audio-files/Stevie Wonder - Isnt She Lovely.mp3";
 var source11 = document.getElementsByClassName("question-audio").src= "audio-files/Pat Benatar - Love Is A Battlefield.mp3";
 var source12 = document.getElementsByClassName("question-audio").src= "audio-files/Plain White T's - Hey There Delilah.mp3";
-var source13 = document.getElementsByClassName("question-audio").src= "audio-files/Queen - Bohemian Rhapsody .mp3";
+var source13 = document.getElementsByClassName("question-audio").src= "audio-files/Queen - Bohemian Rhapsody.mp3";
 var source14 = document.getElementsByClassName("question-audio").src= "audio-files/Ricky Martin - Livin La Vida Loca.mp3";
 var source15 = document.getElementsByClassName("question-audio").src= "audio-files/Justin Timberlake - SexyBack.mp3";
 var source16 = document.getElementsByClassName("question-audio").src= "audio-files/The Beatles - Sgt. Pepper's Lonely Hearts Club Band.mp3";
@@ -220,7 +220,6 @@ let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
-let attempt = 0;
 
 // Question counter
 function setAvailableQuestions() {
@@ -232,7 +231,7 @@ function setAvailableQuestions() {
 
 // Randomquestion
 function getNewQuestion() {
-    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
+    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + 10;
 
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
     currentQuestion = questionIndex;
@@ -294,9 +293,8 @@ function getResult(element) {
             }
         }
     }
-    revealNext();
-    attempt++;
     unclickableOptions();
+    revealNext();
 }
 
 // make sure the user can't change the answer
@@ -349,9 +347,8 @@ function quizOver() {
 // all results 
 function quizResults() {
     resultsBox.querySelector(".total-question").innerHTML = quiz.length;
-    resultsBox.querySelector(".total-attempt").innerHTML = attempt;
     resultsBox.querySelector(".total-correct").innerHTML = correctAnswers;
-    resultsBox.querySelector(".total-wrong").innerHTML = attempt - correctAnswers;
+    resultsBox.querySelector(".total-wrong").innerHTML = questionCounter - correctAnswers;
     const percentage = (correctAnswers/quiz.length)*100;
     resultsBox.querySelector(".total-percentage").innerHTML = percentage.toFixed(2) + "%";
     resultsBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
@@ -360,7 +357,6 @@ function quizResults() {
 function resetQuiz() {
     questionCounter = 0;
     correctAnswers = 0;
-    attempt = 0;
 }
 
 function tryAgainQuiz() {
