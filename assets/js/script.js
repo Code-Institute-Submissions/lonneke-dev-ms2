@@ -15,10 +15,9 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 // Sources of audio-files
-
 var source1 = document.getElementsByClassName("question-audio").src= "audio-files/test2.mp3";
 var source2 = document.getElementsByClassName("question-audio").src= "audio-files/test1.mp3";
 var source3 = document.getElementsByClassName("question-audio").src= "audio-files/test3.mp3";
@@ -56,6 +55,7 @@ const answersIndicatorContainer = document.querySelector(".answers-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultsBox = document.querySelector(".results-box");
+const nextButton = document.querySelector(".next-btn")
 
 let questionCounter = 0;
 let currentQuestion;
@@ -83,6 +83,8 @@ function getNewQuestion() {
     const index1 = availableQuestions.indexOf(questionIndex);
 
     availableQuestions.splice(index1,1);
+
+    hideNext();
 
 // Options and random options
     const optionlen = currentQuestion.options.length
@@ -134,6 +136,7 @@ function getResult(element) {
             }
         }
     }
+    revealNext();
     attempt++;
     unclickableOptions();
 }
@@ -168,6 +171,14 @@ function next() {
     } else {
         getNewQuestion();
     }
+}
+
+function revealNext() {
+    nextButton.classList.remove("hide");
+}
+
+function hideNext() {
+    nextButton.classList.add("hide");
 }
 
 function quizOver() {
