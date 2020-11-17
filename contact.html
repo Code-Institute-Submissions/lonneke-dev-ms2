@@ -24,22 +24,22 @@
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">Music quiz</a>
             <div class="navbar-nav">
-                <a class="nav-item" href="contact.html">Contact </a>
+                <a class="nav-item" href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
     <!-- Email form -->
     <div class="container-fluid">
         <div class="row">
-            <div class="mx-auto custom-box">
+            <div class="mx-auto custom-box form-box">
                 <p>If you would like to contact me please fill in this form.</p>
                     <form onsubmit="return sendMail(this);" >
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" 
                             required>
                         <input type="email" name="emailaddress" id="emailaddress" class="form-control" placeholder="Email" 
                             required>
-                        <textarea rows="5" name="contactinfo" id="contact-info" class="form-control"
-                            placeholder="Contact info" required></textarea>
+                        <textarea rows="5" name="message" id="message" class="form-control"
+                            placeholder="Message" required></textarea>
                         <div class="form-row text-center">
                             <div class="col">
                                 <button type="submit" class="email-btn btn">Send Email</button>
@@ -47,6 +47,18 @@
                         </div>
                     </form>
             </div>
+        </div>
+    </div>
+
+    <div class="mx-auto custom-box email-box hide">
+        <div class="center">
+            <h3>Your message has been send.</h3>
+        </div>
+    </div>
+    <div class="mx-auto custom-box error-box hide">
+        <div class="center">
+            <h3>Something went wrong, please try again.</h3>
+            <button type="button" id="form-btn btn" class="btn" onclick="GoBackToForm()">Try again</button>
         </div>
     </div>
 </body>

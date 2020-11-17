@@ -25,10 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
+    margin: 10px;
     padding: 15px 45px;
     color: #fff;
     border-radius: .3em;
     cursor: pointer;
+    border: 1px solid #000;
 }
 
 /*----------------------------------- Bs navbar */
@@ -112,9 +114,11 @@ header {
 }
 
 .custom-box {
+    color: #fff;
     background-color: rgb(92, 92, 92);
     width: 800px;
     max-width: 95%;
+    min-height: 300px;
     margin-top: 160px;
     border-radius: 5px;
     padding: 10px;
@@ -260,6 +264,17 @@ header {
     margin: 10px auto;
 }
 
-.email-btn {
-    border: 1px solid #000;
+.email-box, .error-box {
+    position: relative;
+    margin-top: 160px;
+    color: #fff;
+} 
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
