@@ -21,7 +21,7 @@ function setAvailableQuestions() {
     }
 }
 
-// Randomquestion
+// Random question
 function getNewQuestion() {
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + 10;
 
@@ -100,7 +100,7 @@ function unclickableOptions() {
 // keeps track of how many question were answered correctly
 function answerIndicator() {
     answersIndicatorContainer.innerHTML = " ";
-    const totalQuestion = quiz.length;
+    const totalQuestion = 10;
     for(let i=0; i<totalQuestion; i++) {
         const indicator = document.createElement("div");
         answersIndicatorContainer.appendChild(indicator);
@@ -113,7 +113,7 @@ function updateAnwserIndicator(markType) {
 
 // next button shows next question
 function next() {
-    if(questionCounter === quiz.length) {
+    if(questionCounter === 10) {
         console.log("quiz over");
         quizOver();
     } else {
@@ -138,12 +138,12 @@ function quizOver() {
 
 // all results 
 function quizResults() {
-    resultsBox.querySelector(".total-question").innerHTML = quiz.length;
+    resultsBox.querySelector(".total-question").innerHTML = 10;
     resultsBox.querySelector(".total-correct").innerHTML = correctAnswers;
     resultsBox.querySelector(".total-wrong").innerHTML = questionCounter - correctAnswers;
     const percentage = (correctAnswers/quiz.length)*100;
     resultsBox.querySelector(".total-percentage").innerHTML = percentage.toFixed(2) + "%";
-    resultsBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
+    resultsBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + 10;
 }
 
 function resetQuiz() {

@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: .3em;
     cursor: pointer;
     border: 1px solid #000;
+    box-shadow: 0 0 10px 2px;
 }
 
 /*----------------------------------- Bs navbar */
@@ -48,6 +49,7 @@ header {
     font-size: 20px;
     padding: 0;
     font-weight: 500;
+    box-shadow: 0 0 10px 2px;
 }
 
 .navbar-brand {
@@ -107,13 +109,7 @@ header {
     cursor: pointer;
 } 
 
-/*----------------------------------- Main screen with levels */
-
-.level {
-    width: 90px;
-    margin: 10px;
-    border-radius: .3em;
-}
+/*----------------------------------- Main screen */
 
 .custom-box {
     color: #fff;
@@ -139,11 +135,16 @@ header {
     }
 }
 
-.level-title {
+.title {
     background: url("../images/background-index.jpg") no-repeat center center fixed;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+.start-btn {
+    margin-top: 30px;
+}
+
 /*----------------------------------- questions section */
 
 .question-number {
@@ -265,6 +266,19 @@ header {
 
 /*----------------------------------- Contact page */
 
+.form-box {
+    color: #fff;
+    background-color: rgb(92, 92, 92);
+    width: 800px;
+    max-width: 95%;
+    min-height: 300px;
+    margin-top: 160px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    animation: fadeInRight 1s ease;
+}
+
 .form-control {
     margin: 10px auto;
 }
@@ -288,18 +302,16 @@ header {
 
 .copyright{
     color: #fff;
-    font-family: "Comfortaa", sans-serif;
-    margin-bottom: 0;
-    padding: 26px;
+    padding: 30px 30px 5px;
 }
 
 .social-media i{
     font-size: 40px;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
 }
 
 .social-media i:hover {
-    color: #000;
-    transition: all .35s ease-in-out;
+    color: rgb(92, 92, 92);
+    transition: all .2s ease-in-out;
 }

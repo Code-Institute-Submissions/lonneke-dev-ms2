@@ -179,7 +179,7 @@ const quiz = [
     },
     {
         song: source30,
-        options:["Billie Eilish - bad guy", "Lil Nas X - Old Town Road", "Tones and I - Dance Monkey", "Imagine Dragons - Believer"],
+        options:["Billie Eilish - Bad Guy", "Lil Nas X - Old Town Road", "Tones and I - Dance Monkey", "Imagine Dragons - Believer"],
         answer: 0
     }
 ];
