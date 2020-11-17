@@ -14,6 +14,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat Alternates", sans-serif;
+    padding: 20px;
 }
 
 .row {
@@ -277,4 +278,24 @@ header {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+/*----------------------------------- Footer */
+
+.copyright{
+    color: #fff;
+    font-family: "Comfortaa", sans-serif;
+    margin-bottom: 0;
+    padding: 26px;
+}
+
+.social-media i{
+    font-size: 40px;
+    color: #fff;
+    padding: 10px;
+}
+
+.social-media i:hover {
+    color: #000;
+    transition: all .35s ease-in-out;
 }
