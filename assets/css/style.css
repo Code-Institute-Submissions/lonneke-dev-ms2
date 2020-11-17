@@ -256,14 +256,10 @@ header {
 
 /*----------------------------------- Contact page */
 
-.contact-box {
-    background-color: rgb(92, 92, 92);
-    width: 800px;
-    max-width: 95%;
-    margin-top: 300px;
-    height: 100px;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
-    animation: fadeInRight 1s ease;
-} 
+.form-control {
+    margin: 10px auto;
+}
+
+.email-btn {
+    border: 1px solid #000;
+}
