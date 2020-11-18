@@ -17,6 +17,7 @@ Intro Quiz is a multiple choice music game where the user listens to a short int
         1. As a First Time Visitor, I want to easily understand the game I'm about to play.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
         3. As a First Time Visitor, I want to get the resutls after playing the game.
+        4. As a First Time Visitor, I want to pause and play the audio whenever I want.
 
     -   #### Returning Visitor Goals
 
@@ -81,6 +82,7 @@ Intro Quiz is a multiple choice music game where the user listens to a short int
 -   A broughter range of songs for the quiz.
 -   Multiple different kinds of games all concernign music. 
 -   A list with all the songs used in the quiz with links to the songs.
+-   Using the audio API for all the audio.
 
 ## Technologies Used
 
@@ -120,6 +122,7 @@ All testing information can be found in a this separate file: [TESTING.md](TESTI
 ### Fixed Bugs
 
 -   The full length of the array was shown whilst playing the game: by changing all the quiz.length to 10 the problem was solved.
+-   
 
 
 ## Deployment
@@ -186,15 +189,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   [Transparent Text](https://codepen.io/AdamGrayson/pen/VPMzoW): For the background effect on most of the titles.
 
-### Content
-
--   All audio is downloaded with a youtube converter and I don't own any of it.
-
--   All other content is written by the developer (me).
-
 ### Media
 
 -   The background image was retrieved from a free sample at [dribble.com](https://dribbble.com/shots/1576433-16-Free-Blurry-Backgrounds).
+
+-   All audio is downloaded with this [youtube converter](https://ytmp3.cc/en13/), all of the audio is not owned by me.
 
 ### Acknowledgements
 

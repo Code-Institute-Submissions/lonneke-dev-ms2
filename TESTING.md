@@ -19,12 +19,17 @@ To test the JavaScript code JSHint validator was used to make sure there weren't
 <hr>
     <img src="assets/images/css.png">
     <img src="assets/images/css-2.png">
+
+    - The warnings shown by css are not recognised by the css validator but are used for the different browsers, so not relevant to change.
+
 <hr>
 -   [JSHint](https://jshint.com/)
 
     - The validation of email.js.
 <hr>
     <img src="assets/images/email.png">
+
+    - The unused variable in the email.js file are used as a button onclick function, so they are used outside of the JavaScript file.
 <hr>
     - The validation of instructions.js.
 <hr>
@@ -33,8 +38,11 @@ To test the JavaScript code JSHint validator was used to make sure there weren't
     - The validation of questions.js.
 <hr>
     <img src="assets/images/questions.png">
+
+    - The unused quiz variable is used in the script.js file, but to keep from cluttering the script.js file I have separated the complete file in to 2.
 <hr>
     - The validation of script.js.
+<hr>
     <img src="assets/images/script.png">
 
 ## Testing User Stories
@@ -54,6 +62,10 @@ To test the JavaScript code JSHint validator was used to make sure there weren't
     3. As a First Time Visitor, I want to get the resutls after playing the game.
         
         1. After the user has finsished the game a result box will appear which holds all the information collected while the user played.
+
+    4. As a First Time Visitor, I want to pause and play the audio whenever I want.
+
+        1. With the audio controls used in the HTML the user can easily pause and play audio.
 
 -   #### Returning Visitor Goals
 

@@ -13,7 +13,7 @@ let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
 
-// Question counter
+// Gets a question out of the quiz array
 function setAvailableQuestions() {
     const totalQuestion = quiz.length;
     for(let i=0; i<totalQuestion; i++) {
@@ -21,10 +21,11 @@ function setAvailableQuestions() {
     }
 }
 
-// Random question
+// Sets up the next Question randomly
 function getNewQuestion() {
+    // Updates the question counter
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + 10;
-
+    // Chooses random question
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     currentQuestion = questionIndex;
     questionAudio.src = currentQuestion.song;
@@ -35,15 +36,18 @@ function getNewQuestion() {
 
     hideNext();
 
-// Options and random options
+    // Gets options
     const optionlen = currentQuestion.options.length;
     
     for(let i=0; i<optionlen; i++) {
         availableOptions.push(i);
     }
+
+    // Style effect on options
     optionContainer.innerHTML = " ";
     let animationDelay = 0.15;
-
+    
+    // Chooses option randomly
     for(let i=0; i<optionlen; i++) {
         const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
         const index2 = availableOptions.indexOf(optionIndex);
@@ -89,7 +93,7 @@ function getResult(element) {
     revealNext();
 }
 
-// make sure the user can't change the answer
+// Make sure the user can't change the answer
 function unclickableOptions() {
     const optionLen = optionContainer.children.length;
     for(let i=0; i<optionLen; i++) {
@@ -97,7 +101,7 @@ function unclickableOptions() {
     }
 }
 
-// keeps track of how many question were answered correctly
+// Keeps track of how many question were answered correctly
 function answerIndicator() {
     answersIndicatorContainer.innerHTML = " ";
     const totalQuestion = 10;
@@ -107,11 +111,12 @@ function answerIndicator() {
     }
 }
 
+// Updates the answerindicator 
 function updateAnwserIndicator(markType) {
     answersIndicatorContainer.children[questionCounter-1].classList.add(markType);
 }
 
-// next button shows next question
+// Next button shows next question
 function next() {
     if(questionCounter === 10) {
         console.log("quiz over");
@@ -121,22 +126,26 @@ function next() {
     }
 }
 
+// Reveals next button after answering the question
 function revealNext() {
     nextButton.classList.remove("hide");
 }
 
+// Hides the next button 
 function hideNext() {
     nextButton.classList.add("hide");
 }
 
+// Stops the quiz after the 10th question
 function quizOver() {
     quizBox.classList.add("hide");
+    killAudio();
 
     resultsBox.classList.remove("hide");
     quizResults();
 }
 
-// all results 
+// Gets results of the quiz
 function quizResults() {
     resultsBox.querySelector(".total-question").innerHTML = 10;
     resultsBox.querySelector(".total-correct").innerHTML = correctAnswers;
@@ -146,11 +155,19 @@ function quizResults() {
     resultsBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + 10;
 }
 
+// Resets the quiz 
 function resetQuiz() {
     questionCounter = 0;
     correctAnswers = 0;
 }
 
+// Stops the audio after finishing the quiz
+function killAudio() {
+    questionAudio.pause();
+    questionAudio.currentTime = 0;
+}
+
+// Starts a new quiz
 function tryAgainQuiz() {
     resultsBox.classList.add("hide");
 
@@ -159,6 +176,7 @@ function tryAgainQuiz() {
     startQuiz();
 }
 
+// Goes to the main page
 function goToHome() {
     resultsBox.classList.add("hide");
 
