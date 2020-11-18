@@ -4,7 +4,7 @@
 
 This is my second project with CodeInstitute to show my skills with HTML5, CSS3 and JavaScript.
 
-<h4><img src="assets/images/screenshot.png"></h4> 
+<h4><img src="assets/images/screen.png"></h4> 
 
 Intro Quiz is a multiple choice music game where the user listens to a short intro and needs to choose an answer from the options.
 
