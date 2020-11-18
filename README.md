@@ -16,8 +16,7 @@ Intro Quiz is a multiple choice music game where the user listens to a short int
 
         1. As a First Time Visitor, I want to easily understand the game I'm about to play.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to understand how to play the game.
-        4. As a First Time Visitor, I want to get the resutls after playing the game.
+        3. As a First Time Visitor, I want to get the resutls after playing the game.
 
     -   #### Returning Visitor Goals
 
@@ -25,9 +24,7 @@ Intro Quiz is a multiple choice music game where the user listens to a short int
         2. As a Returning Visitor, I want to find the best way to get in to contact so I could ask questions and get more information.
 
     -   #### Frequent User Goals
-        1. As a Frequent User, I want to know if there are updates.
-        2. As a Frequent User, I want contact the person behind the project.
-        3. As a Frequent User, I want to know if there's anything new and if there are any discounts.
+        1. As a Frequent User, I want contact the person behind the project.
 
 -   ### Design
     -   #### Colour Scheme
@@ -83,6 +80,7 @@ Intro Quiz is a multiple choice music game where the user listens to a short int
 -   Three different difficulties in the game.
 -   A broughter range of songs for the quiz.
 -   Multiple different kinds of games all concernign music. 
+-   A list with all the songs used in the quiz with links to the songs.
 
 ## Technologies Used
 
@@ -117,12 +115,12 @@ All testing information can be found in a this separate file: [TESTING.md](TESTI
 
 ### Known Bugs
 
--   In some browsers the vertical images show horizontally unless they are opened in a separate tab by clicking on them.
+-   Currently there aren't any bugs that needs to be fixed.
 
--   Navbar collapsed didn't show the background correctly : By changing the height of the navbar back to normal it showed the background correctly again.
--   On chrome when decreasing the screen size you could move the website horizontally : By getting rid of the live instagram post and making all margins and padding throughout the website the same the problem was fixed.
--   The equipment image in the about section didn't align nicely with the bottom : by giving the image extra top padding on a large screen size the image was nicely aligned.
--   Gaps in the about section on smaller screen sizes : I created a mediaquery to decide the padding on a bigger screensize so the smaller screensizes have minimum padding.
+### Fixed Bugs
+
+-   The full length of the array was shown whilst playing the game: by changing all the quiz.length to 10 the problem was solved.
+
 
 ## Deployment
 
@@ -184,28 +182,26 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   [W3schools](https://www.w3schools.com/): Used to help with finding the right names and attributes.
 
+-   [Simple JavaScript Quiz](https://www.youtube.com/watch?v=88UESQT5q6A): For helping me create the quiz with JavaScript.
+
+-   [Transparent Text](https://codepen.io/AdamGrayson/pen/VPMzoW): For the background effect on most of the titles.
+
 ### Content
 
--   The cover-text on the hero image is a quote written by "Peter James".
-
--   The content of the privacy policy is made through [websitepolicyies](https://www.websitepolicies.com/?utm_source=newsletter&utm_medium=email&utm_campaign=new-user&utm_content=welcome&utm_term=websitepolicies.com) for the privacy policy 
+-   All audio is downloaded with a youtube converter and I don't own any of it.
 
 -   All other content is written by the developer (me).
 
 ### Media
 
--   The instagram-post image in the contact section is a screenshot made in the instagram app from my account, which can be found [here](https://www.instagram.com/p/B7X_FUIFR2T/?hl=nl)
-
--   All other images used on this website are obtained from my own personal library.
+-   The background image was retrieved from a free sample at [dribble.com](https://dribbble.com/shots/1576433-16-Free-Blurry-Backgrounds).
 
 ### Acknowledgements
 
 -   My Mentor for giving me feedback and support.
 
--   Tutor support at [Code Institute](https://codeinstitute.net/) for their helpful tips and tricks and keeping me motivated all the way through.
+-   Student Care at [Code Institute](https://codeinstitute.net/) for keeping me motivated.
 
--   The code institute [slack](https://slack.com/intl/en-nl/) community for helping me out with problems like finding the right bootstrap command and layout ideas.
+-   The code institute [slack](https://slack.com/intl/en-nl/) community for helping me out with small problems like finding the right attribute etc.
 
--   My parents for listening to me while I rambled on about fixing problems and trying to explain what I was actually doing to understand what I was doing myself.
-
--   My friends for supporting me and showing excitement when I figured something out again.
+-   My parents for supporting me throughout the project.

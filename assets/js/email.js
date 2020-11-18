@@ -1,12 +1,12 @@
 function sendMail(contactForm) {
     emailjs.send("service_gyau47p","lonneke", {
-        "from_name" : contactForm.name.value,
-        "from_email" : contactForm.emailaddress.value,
-        "message" : contactForm.message.value
-    }) 
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.emailaddress.value,
+        "message": contactForm.message.value
+    })
     .then(
         function(response) {
-            console.log("SUCCES", response);
+            console.log("SUCCESS", response);
             emailSend();
         },
         function(error) {
@@ -14,7 +14,7 @@ function sendMail(contactForm) {
             emailError();
         }
     );
-    return false;
+    return false;  // To block from loading a new page
 }
 
 const emailBox = document.querySelector(".email-box");

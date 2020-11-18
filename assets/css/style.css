@@ -305,13 +305,13 @@ header {
     padding: 30px 30px 5px;
 }
 
-.social-media i{
+.fab {
     font-size: 40px;
     color: #fff;
     padding: 5px;
 }
 
-.social-media i:hover {
+.fab:hover {
     color: rgb(92, 92, 92);
     transition: all .2s ease-in-out;
 }

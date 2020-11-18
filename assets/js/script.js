@@ -5,7 +5,7 @@ const answersIndicatorContainer = document.querySelector(".answers-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultsBox = document.querySelector(".results-box");
-const nextButton = document.querySelector(".next-btn")
+const nextButton = document.querySelector(".next-btn");
 
 let questionCounter = 0;
 let currentQuestion;
@@ -17,7 +17,7 @@ let correctAnswers = 0;
 function setAvailableQuestions() {
     const totalQuestion = quiz.length;
     for(let i=0; i<totalQuestion; i++) {
-        availableQuestions.push(quiz[i])
+        availableQuestions.push(quiz[i]);
     }
 }
 
@@ -25,7 +25,7 @@ function setAvailableQuestions() {
 function getNewQuestion() {
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + 10;
 
-    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
+    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     currentQuestion = questionIndex;
     questionAudio.src = currentQuestion.song;
 
@@ -36,10 +36,10 @@ function getNewQuestion() {
     hideNext();
 
 // Options and random options
-    const optionlen = currentQuestion.options.length
+    const optionlen = currentQuestion.options.length;
     
     for(let i=0; i<optionlen; i++) {
-        availableOptions.push(i)
+        availableOptions.push(i);
     }
     optionContainer.innerHTML = " ";
     let animationDelay = 0.15;
@@ -56,11 +56,11 @@ function getNewQuestion() {
 
         option.id = optionIndex;
         option.className = "option";
-        optionContainer.appendChild(option)
+        optionContainer.appendChild(option);
         option.setAttribute("onclick", "getResult(this)");
     }
 
-    questionCounter++
+    questionCounter++;
 }
 
 // Get the results of the current question
@@ -72,7 +72,7 @@ function getResult(element) {
 
         updateAnwserIndicator("correct");
         correctAnswers++;
-        console.log("correct:" + correctAnswers)
+        console.log("correct:" + correctAnswers);
     } else {
         element.classList.add("wrong");
 
@@ -93,7 +93,7 @@ function getResult(element) {
 function unclickableOptions() {
     const optionLen = optionContainer.children.length;
     for(let i=0; i<optionLen; i++) {
-        optionContainer.children[i].classList.add("already-answered")
+        optionContainer.children[i].classList.add("already-answered");
     }
 }
 
@@ -108,7 +108,7 @@ function answerIndicator() {
 }
 
 function updateAnwserIndicator(markType) {
-    answersIndicatorContainer.children[questionCounter-1].classList.add(markType)
+    answersIndicatorContainer.children[questionCounter-1].classList.add(markType);
 }
 
 // next button shows next question
