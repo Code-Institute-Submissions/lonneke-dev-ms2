@@ -90,5 +90,7 @@ To test the JavaScript code JSHint validator was used to make sure there weren't
 
 ## Further Testing
 
--   The Website was tested on multiple browsers and a variety of devices
+-   The Website was tested on multiple browsers and a variety of devices:
+    <img src="assets/images/testing.png">
+-   To test on the different browsers [lambdatests](https://accounts.lambdatest.com/dashboard) was used.
 -   A large amount of testing was done on responsiveness, functionality and interactivity.

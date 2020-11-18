@@ -122,8 +122,7 @@ All testing information can be found in a this separate file: [TESTING.md](TESTI
 ### Fixed Bugs
 
 -   The full length of the array was shown whilst playing the game: by changing all the quiz.length to 10 the problem was solved.
--   
-
+-   In Safari the contact link wasn't shown in the navbar, it got fixed by deleting the div around it.
 
 ## Deployment
 
@@ -157,13 +156,13 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/lonneke-dev/ms1
+$ git clone https://github.com/lonneke-dev/ms2
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ```
-$ git clone https://github.com/lonneke-dev/ms1
+$ git clone https://github.com/lonneke-dev/ms2
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.

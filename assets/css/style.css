@@ -60,7 +60,7 @@ header {
     -webkit-background-clip: text;
 }
 
-.navbar-nav {
+.nav-item {
     margin: auto 15px auto auto;
     background: url("../images/background-index.jpg") no-repeat center center fixed;
     -webkit-text-fill-color: transparent;
